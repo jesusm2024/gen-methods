@@ -1,0 +1,110 @@
+:root {
+  --color-text-main: #000000;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Font imports */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Global styles */
+body {
+  font-family: HK Grotesk;
+  background-color: black;
+}
+
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title styling */
+.title {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 0;
+  color: white;
+}
+
+/* Grid layout */
+.favs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Three items per row */
+  gap: 20px 10px; /* Horizontal and vertical spacing */
+  margin: 1rem auto;
+}
+
+/* Individual grid item styling */
+.fav-item {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 10px ridge;
+}
+
+/* Image styling */
+.fav-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Links */
+.fav-item h2 a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Descriptions */
+.fav-item h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* Footer styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
